@@ -19,6 +19,6 @@ spec:
         - "-H" 
         - "Content-Type: application/json"
         - "-d" 
-        - '{\"text": "Hook Works 😊\"}'
+        - '{"text": "Hook Works 😊"}'
       restartPolicy: Never
   backoffLimit: 2
