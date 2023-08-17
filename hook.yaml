@@ -17,8 +17,8 @@ spec:
         - "POST"
         - "https://api.flock.com/hooks/sendMessage/e511f324-c939-4f6e-8787-2e653e2642d1"
         - "-H" 
-        - "\"Content-Type: application/json\"
+        - "Content-Type: application/json"
         - "-d" 
-        - "'{\"text": "Hook Works 😊\"}'"
+        - '{\"text": "Hook Works 😊\"}'
       restartPolicy: Never
   backoffLimit: 2
