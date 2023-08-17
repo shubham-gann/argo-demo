@@ -7,17 +7,17 @@ metadata:
     argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
   template:
-  spec:
-    containers:
-    - name: flock-notification
-      image: curlimages/curl
-      command:
-      - "curl"
-      - "-X"
-      - "POST"
-      - "https://api.flock.com/hooks/sendMessage/e511f324-c939-4f6e-8787-2e653e2642d1"
-      - "- H"
-      - "Content-Type: application/json"
-      - "-d \'{\'text\': \'Hook Works 😊\'}"
-    restartPolicy: Never
+    spec:
+      containers:
+      - name: flock-notification
+        image: curlimages/curl
+        command:
+        - "curl"
+        - "-X"
+        - "POST"
+        - "https://api.flock.com/hooks/sendMessage/e511f324-c939-4f6e-8787-2e653e2642d1"
+        - "- H"
+        - "Content-Type: application/json"
+        - "-d \'{\'text\': \'Hook Works 😊\'}"
+      restartPolicy: Never
   backoffLimit: 2
